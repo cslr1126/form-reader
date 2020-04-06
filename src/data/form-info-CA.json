@@ -1,0 +1,164 @@
+[
+    {
+        "title": "Business Associate Agreement",
+        "description": "",
+        "collection": [
+            {
+                "title": "Business Associate Agreement",
+                "description": "The agreement (\"Agreement\" is effective on the date executed by Business Associate and is between the Broken/Broker/Agency/Agent named in the execution of this Agreement (\"Business Associate\") and Anthem, Inc. and/or any of its affilates and subsidiaries, including Simply Healthcare, who are Covered Entities or Business Associates and who have a business relationship with Business Associate, if any (hereinafter collectively).",
+                "grid": {
+                    "row": {
+                        "gutter": 24
+                    }
+                },
+                "elements": [
+                    {
+                        "title": "Sign and Date",
+                        "subTitle": "By entering your name and date, you are signing the form electronically. You agree your elctronic signature is the legal equivalent of your manual/handwritten signature on ALL submitted forms and creates a legally binding effect on you and/or the agency on whose behalf you are signing.",
+                        "formElements": [
+                            {
+                                "type": "text",
+                                "name": "firstName",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "First Name",
+                                    "label": {
+                                        "name": "First Name"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "lastName",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Last Name",
+                                    "label": {
+                                        "name": "Last Name"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "date",
+                                "name": "todayDate",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Today&rsquo;s Date (MM/DD/YYYY)",
+                                    "label": {
+                                        "name": "Today&rsquo;s Date (MM/DD/YYYY)"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Additional Disclosures",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Additional State Law Notices",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Business Associate Agreement",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Background Check",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Consumer Reports Disclosure",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Summary of Your Rights",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Appointment Application",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Broker Services",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Code of Ethics",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Medicare Sales Presentation Commitment",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Indpendent Broken Agreement",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Non Disclosure/Confidentiality Agreement",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "Telmarketing Practice Statement",
+        "description": "",
+        "collection": []
+    },
+    {
+        "title": "TIN and Certification",
+        "description": "",
+        "collection": []
+    }
+]

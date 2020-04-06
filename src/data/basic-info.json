@@ -1,0 +1,680 @@
+[
+    {
+        "title": "Tell us little more about yourself so we can build our partnership and stay in touch.",
+        "description": "",
+        "collection": [
+            {
+                "title": "Personal Information",
+                "grid": {
+                    "row": {
+                        "gutter": 24
+                    }
+                },
+                "elements": [
+                    {
+                        "formElements": [
+                            {
+                                "type": "text",
+                                "name": "firstName",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "First Name",
+                                    "label": {
+                                        "name": "First Name"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "lastName",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Last Name",
+                                    "label": {
+                                        "name": "Last Name"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "alias",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Former Name or Alias",
+                                    "label": {
+                                        "name": "Former Name or Alias"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "dateBirth",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Date of Birth(mm/dd/yyyy)",
+                                    "label": {
+                                        "name": "Date of Birth(mm/dd/yyyy)"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "phoneNumber",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Phone Number",
+                                    "label": {
+                                        "name": "Phone Number"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": {
+                                        "required": false,
+                                        "pattern": {}
+                                    }
+                                }
+                            },
+                            {
+                                "type": "email",
+                                "name": "emailAddress",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Email Address",
+                                    "label": {
+                                        "name": "Email Address"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true,
+                                            "type": "email"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "npn",
+                                "name": "npn",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "NPN (National Producer Number)",
+                                    "label": {
+                                        "name": "NPN (National Producer Number)"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "select",
+                                "name": "stateResidence",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "What is your state of residence?",
+                                    "label": {
+                                        "name": "What is your state of residence?"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ],
+                                    "options": [
+                                        {
+                                            "label": "",
+                                            "value": ""
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "formElements": [
+                            {
+                                "type": "radio-group",
+                                "name": "language",
+                                "grid": {
+                                    "col": {
+                                        "span": 24
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Do you speak more than one language?",
+                                    "label": {
+                                        "name": "Do you speak more than one language?"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ],
+                                    "options": [
+                                        {
+                                            "label": "Yes",
+                                            "value": 1
+                                        },
+                                        {
+                                            "label": "1",
+                                            "value": 2
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "select",
+                                "name": "defaultlang",
+                                "grid": {
+                                    "col": {
+                                        "md": 10
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Select a language",
+                                    "label": {
+                                        "name": "Select a language"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ],
+                                    "dependendOn": {
+                                        "name": "language",
+                                        "method": "onChange"
+                                    },
+                                    "options": [
+                                        {
+                                            "label": "",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "multiple": {
+                                        "enabled": true,
+                                        "label": "Add Another Language"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "radio-group",
+                                "name": "exchangeRelationship",
+                                "grid": {
+                                    "col": {
+                                        "span": 24
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Do you authorize this assignment to be your Exchange relationship?",
+                                    "label": {
+                                        "name": "Do you authorize this assignment to be your Exchange relationship?"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ],
+                                    "options": [
+                                        {
+                                            "label": "Yes",
+                                            "value": 1
+                                        },
+                                        {
+                                            "label": "1",
+                                            "value": 2
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "radio-group",
+                                "name": "sendStatement",
+                                "grid": {
+                                    "col": {
+                                        "span": 24
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Would you like us to send you paper statements?",
+                                    "label": {
+                                        "name": "Would you like us to send you paper statements?"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ],
+                                    "options": [
+                                        {
+                                            "label": "Yes",
+                                            "value": 1
+                                        },
+                                        {
+                                            "label": "1",
+                                            "value": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Locations",
+                "grid": {
+                    "row": {
+                        "gutter": 24
+                    }
+                },
+                "elements": [
+                    {
+                        "title": "Home Locations",
+                        "subTitle": "Current Residence",
+                        "multiple": {
+                            "enabled": true,
+                            "label": "Add another residence address"
+                        },
+                        "formElements": [
+                            {
+                                "type": "text",
+                                "name": "addrLine1",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Address Line 1",
+                                    "label": {
+                                        "name": "Address Line 1"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "addrLine2",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Address Line 2",
+                                    "label": {
+                                        "name": "Address Line 2"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "zipCode",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Zip Code",
+                                    "label": {
+                                        "name": "Zip Code"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true,
+                                            "type": "number"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Business Locations",
+                        "subTitle": "Mailing Address",
+                        "formElements": [
+                            {
+                                "type": "text",
+                                "name": "building_name",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Building Name (if applicable)",
+                                    "label": {
+                                        "name": "Building Name (if applicable)"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "addrLine1",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Address Line 1",
+                                    "label": {
+                                        "name": "Address Line 1"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "addrLine2",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Address Line 2",
+                                    "label": {
+                                        "name": "Address Line 2"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "zipCode",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Zip Code",
+                                    "label": {
+                                        "name": "Zip Code"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true,
+                                            "type": "number"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "subTitle": "Physical Address",
+                        "multiple": {
+                            "enabled": true,
+                            "label": "Add another business address"
+                        },
+                        "formElements": [
+                            {
+                                "type": "text",
+                                "name": "building_name",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Building Name (if applicable)",
+                                    "label": {
+                                        "name": "Building Name (if applicable)"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "addrLine1",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Address Line 1",
+                                    "label": {
+                                        "name": "Address Line 1"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "addrLine2",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Address Line 2",
+                                    "label": {
+                                        "name": "Address Line 2"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "name": "zipCode",
+                                "grid": {
+                                    "col": {
+                                        "xs": 24,
+                                        "sm": 12,
+                                        "md": 8
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Zip Code",
+                                    "label": {
+                                        "name": "Zip Code"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true,
+                                            "type": "number"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "grid": {
+                    "row": {
+                        "gutter": 24
+                    }
+                },
+                "elements": [
+                    {
+                        "subTitle": "Previous Locations",
+                        "formElements": [
+                            {
+                                "type": "radio-group",
+                                "name": "previousAddressCheck",
+                                "grid": {
+                                    "col": {
+                                        "span": 24
+                                    }
+                                },
+                                "properties": {
+                                    "placeholder": "Do you have any previous address(es) you would like to provide?",
+                                    "label": {
+                                        "name": "Do you have any previous address(es) you would like to provide?"
+                                    },
+                                    "disabled": false,
+                                    "validateRules": [
+                                        {
+                                            "required": true
+                                        }
+                                    ],
+                                    "options": [
+                                        {
+                                            "label": "Yes",
+                                            "value": 1
+                                        },
+                                        {
+                                            "label": "1",
+                                            "value": 2
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
