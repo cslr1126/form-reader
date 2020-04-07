@@ -3,9 +3,13 @@ import {Container, Row, Col, Form, Dropdown, InputGroup, DropdownButton, FormCon
 
 const FormHeader = () => {
   const [selectedState, setSelectedState] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
   function handleSelect(evt) {
     setSelectedState(evt.target.value)
 
+  }
+  function handleCategory (evt) {
+      setSelectedCategory(evt.target.value);
   }
   
   return (
@@ -14,7 +18,7 @@ const FormHeader = () => {
           <Row>
             <Col>
             <Form>
-            <Form.Group controlId="exampleForm.ControlSelect1">
+              <Form.Group controlId="antForm.ControlSelect1">
                 <Form.Label>Select a Sate</Form.Label>
                 <Form.Control as="select"  onChange={(evt)=>{handleSelect(evt)}}>
                     <option>--select--</option>
@@ -24,13 +28,36 @@ const FormHeader = () => {
                     <option>Florida</option>
                     <option>Conneticut</option>
                 </Form.Control>
-            </Form.Group>
+              </Form.Group>
+              <Form.Row>  
+              <Form.Group as={Col} controlId="antForm.ControlSelect2">
+                <Form.Label>Select a Category</Form.Label>
+                <Form.Control as="select"  onChange={(evt)=>{handleCategory(evt)}}>
+                    <option>--select--</option>
+                    <option>Applications & Enrollment</option>
+                    <option>Authorization & Verification</option>
+                    <option>Behavioral Health</option>
+                    <option>Benefits & Continuity of Coverage</option>
+                    <option>Claims</option>
+                </Form.Control>
+              </Form.Group>
+              <Form.Group as={Col} controlId="antForm.ControlLanguage">
+                  <Form.Label>Select a Language</Form.Label>
+                  <Form.Control as="select">
+                  <option>--select--</option>
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>Other</option>
+                  </Form.Control>
+              </Form.Group>
+              </Form.Row>    
             </Form>
             </Col>
 
           </Row>
+         
          <Row>
-            <h4>You selected: {selectedState}</h4>
+            <h4>You selected: {selectedState}</h4> and <h4> {selectedCategory}</h4>
          </Row>
 
       </>
