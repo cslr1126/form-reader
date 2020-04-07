@@ -1,22 +1,32 @@
 import React from 'react';
+import {Container, Row} from 'react-bootstrap';
+import { useFetch } from './hooks';
+import FormHeader from './components/FormHeader';
+import UserForm from './components/UserForm';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+  const [data, loading] = useFetch(
+    "https://s3.amazonaws.com/mymeganotes.com/basic-info.json"
+  );
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-header">
+    <Container>
+    <FormHeader/>
+       {loading ? (
+         "loading..."
+       ) : (
+        <>
+          {data[0].collection.map((item, idx) => (
+            <UserForm key={idx} props={item}/>
+          ))}
+        </>
+       )}
+      
+      </Container>
     </div>
   );
 }

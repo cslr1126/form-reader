@@ -527,7 +527,7 @@
                         ]
                     },
                     {
-                        "subTitle": "Physical Address",
+                        "title": "Physical Address",
                         "multiple": {
                             "enabled": true,
                             "label": "Add another business address"
@@ -629,51 +629,8 @@
                         ]
                     }
                 ]
-            },
-            {
-                "grid": {
-                    "row": {
-                        "gutter": 24
-                    }
-                },
-                "elements": [
-                    {
-                        "subTitle": "Previous Locations",
-                        "formElements": [
-                            {
-                                "type": "radio-group",
-                                "name": "previousAddressCheck",
-                                "grid": {
-                                    "col": {
-                                        "span": 24
-                                    }
-                                },
-                                "properties": {
-                                    "placeholder": "Do you have any previous address(es) you would like to provide?",
-                                    "label": {
-                                        "name": "Do you have any previous address(es) you would like to provide?"
-                                    },
-                                    "disabled": false,
-                                    "validateRules": [
-                                        {
-                                            "required": true
-                                        }
-                                    ],
-                                    "options": [
-                                        {
-                                            "label": "Yes",
-                                            "value": 1
-                                        },
-                                        {
-                                            "label": "1",
-                                            "value": 2
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                ]
+            
+                
             }
         ]
     }
