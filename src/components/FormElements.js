@@ -11,8 +11,7 @@ const FormElements = (props) => {
           <InputGroup  key={idx} className="mb-12">
         
           <FormControl
-            placeholder={item.properties.placeholder}
-            aria-label={item.properties.label}
+            aria-label={item.attributes.name}
             aria-describedby="basic-addon1"
           />
         </InputGroup>

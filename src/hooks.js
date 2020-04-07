@@ -13,6 +13,7 @@ function useFetch(url) {
   {
     const response = await fetch(url,{method: 'GET', headers: headers});
     const json = await response.json();
+    console.log(json);
     setData(json);
     setLoading(false);
   }

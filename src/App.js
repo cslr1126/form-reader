@@ -19,8 +19,10 @@ function App() {
        {loading ? (
          "loading..."
        ) : (
+        
         <>
-          {data[0].collection.map((item, idx) => (
+         
+          {data.items.map((item, idx) => (
             <UserForm key={idx} props={item}/>
           ))}
         </>
