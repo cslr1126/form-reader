@@ -3,32 +3,27 @@ import {Container, Row, Col, Form, Dropdown, InputGroup, DropdownButton, FormCon
 
 const FormHeader = () => {
   const [selectedState, setSelectedState] = useState('');
- 
+  function handleSelect(evt) {
+    setSelectedState(evt.target.value)
+
+  }
   
   return (
       <>
-       <Container>
+    
           <Row>
             <Col>
             <Form>
-            <Form.Group controlId="formBasicInformation">
-                <Form.Label>Please select your state
-                 Our forms are organized by state. Select your state below to view forms for your area.</Form.Label>
-                <InputGroup className="mb-3">
-                    <DropdownButton
-                    as={InputGroup.Prepend}
-                    variant="outline-secondary"
-                    title="Select Your State"
-                    id="input-group-dropdown-1"
-                    onSelect={function(evt){setSelectedState(evt)}}>
-                    >
-                    <Dropdown.Item href="newyork">New York</Dropdown.Item>
-                    <Dropdown.Item href="california">California</Dropdown.Item>
-                    <Dropdown.Item href="florida">Florida</Dropdown.Item>
-                    </DropdownButton>
-                    <FormControl aria-describedby="basic-addon1"  />
-                    
-                </InputGroup>
+            <Form.Group controlId="exampleForm.ControlSelect1">
+                <Form.Label>Select a Sate</Form.Label>
+                <Form.Control as="select"  onChange={(evt)=>{handleSelect(evt)}}>
+                    <option>--select--</option>
+                    <option>New York</option>
+                    <option>New Jersey</option>
+                    <option>California</option>
+                    <option>Florida</option>
+                    <option>Conneticut</option>
+                </Form.Control>
             </Form.Group>
             </Form>
             </Col>
@@ -37,7 +32,7 @@ const FormHeader = () => {
          <Row>
             <h4>You selected: {selectedState}</h4>
          </Row>
-        </Container>
+
       </>
   )
 

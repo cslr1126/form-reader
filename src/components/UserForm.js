@@ -11,17 +11,17 @@ const UserForm = (element) => {
 
   
   return (
-    <Row>
-
+    <>
+      <h3>{title  ? title : subTitle}</h3>
       <Form>
-         <h1>{title  ? title : subTitle}</h1>
          
+       
          {elements.map((item, idx) => (
            <FormElements key={idx} value={item}/>
          ))}
-         
+        
       </Form>
-    </Row>
+      </>
   ) 
   
 
