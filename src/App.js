@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
   const [data, loading] = useFetch(
-    "https://s3.amazonaws.com/mymeganotes.com/basic-info.json"
+    "https://webserver-trialanthem-prd.lfr.cloud/o/headless-anthem-forms/v1.0/forms/site/20124"
   );
   
   return (
