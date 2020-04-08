@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
-import { Row, Col, Form, Button} from 'react-bootstrap';
+import { Row, Col, Form} from 'react-bootstrap';
+import LoadingButton from './LoadingButtom';
+import FormTable from './FormTable';
 
-const FormHeader = () => {
+const FormHeader = (props) => {
+  
   const [selectedState, setSelectedState] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   function handleSelect(evt) {
@@ -54,13 +57,18 @@ const FormHeader = () => {
             </Col>
           </Row>    
           <Row>
+            <Col>
             <h4>You selected: {selectedState}</h4> and <h4> {selectedCategory}</h4>
+            </Col>            
          </Row>
          <Row>
            <Col>
-            <Button variant="secondary" size="lg" block>
-             Submit
-            </Button>
+             <FormTable items={props.items} loading={props.loading}/>
+           </Col>
+         </Row>
+         <Row>
+           <Col>
+            <LoadingButton getForms={props.getForms} />
            </Col>
          </Row> 
         
