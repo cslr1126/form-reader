@@ -1,21 +1,18 @@
 import React, {Fragment} from 'react';
-import {FormControl, InputGroup} from 'react-bootstrap';
+import {FormControl, FormGroup, FormLabel} from 'react-bootstrap';
 
 const FormElements = (props) => {
    console.log(props.value)
    const elements = props.value.formElements;
-
+   
    return (
     <Fragment>
       {elements.map((item, idx) => (
-          <InputGroup  key={idx} className="mb-12">
-        
-          <FormControl
-            aria-label={item.attributes.name}
-            aria-describedby="basic-addon1"
-          />
-        </InputGroup>
-          
+       
+       <FormGroup key={idx} controlId="formGroupEmail"> 
+         <FormLabel>{item.name}</FormLabel>
+          <FormControl type={item.fieldType}/>
+          </FormGroup> 
       ))}
      </Fragment>
     )  

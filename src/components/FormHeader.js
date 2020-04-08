@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Container, Row, Col, Form, Dropdown, InputGroup, DropdownButton, FormControl} from 'react-bootstrap';
+import { Row, Col, Form, Button} from 'react-bootstrap';
 
 const FormHeader = () => {
   const [selectedState, setSelectedState] = useState('');
@@ -13,9 +13,8 @@ const FormHeader = () => {
   }
   
   return (
-      <>
-    
-          <Row>
+      <> 
+         <Row>
             <Col>
             <Form>
               <Form.Group controlId="antForm.ControlSelect1">
@@ -53,13 +52,18 @@ const FormHeader = () => {
               </Form.Row>    
             </Form>
             </Col>
-
-          </Row>
-         
-         <Row>
+          </Row>    
+          <Row>
             <h4>You selected: {selectedState}</h4> and <h4> {selectedCategory}</h4>
          </Row>
-
+         <Row>
+           <Col>
+            <Button variant="secondary" size="lg" block>
+             Submit
+            </Button>
+           </Col>
+         </Row> 
+        
       </>
   )
 
