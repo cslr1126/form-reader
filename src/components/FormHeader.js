@@ -10,8 +10,6 @@ const FormHeader = (props) => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  //const [url, setUrl] = useState( 'https://webserver-trialanthem-prd.lfr.cloud/o/headless-anthem-forms/v1.0/forms/34639');
-  //let [data, loading] = useFetch(url);
   const [url, setUrl] = useState();
 
   const handleSelect = (evt) =>{
@@ -27,7 +25,6 @@ const FormHeader = (props) => {
   headers.set('Authorization', 'Basic ' + btoa(authString))
 
   async function selectedRow  (row) {
-        console.log('in async function ' + row)
         if(row === '35029') {
           setUrl('https://webserver-trialanthem-prd.lfr.cloud/o/headless-anthem-forms/v1.0/forms/35029');
         }else if(row === '34691')
