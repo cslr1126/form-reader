@@ -1,20 +1,52 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
 import { Row, Col, Form} from 'react-bootstrap';
 import LoadingButton from './LoadingButtom';
 import FormTable from './FormTable';
+import UserForm from './UserForm';
+import { useFetch } from '../hooks';
 
 const FormHeader = (props) => {
-  
   const [selectedState, setSelectedState] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
-  function handleSelect(evt) {
-    setSelectedState(evt.target.value)
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  //const [url, setUrl] = useState( 'https://webserver-trialanthem-prd.lfr.cloud/o/headless-anthem-forms/v1.0/forms/34639');
+  //let [data, loading] = useFetch(url);
+  const [url, setUrl] = useState();
 
+  const handleSelect = (evt) =>{
+    setSelectedState(evt.target.value)
   }
-  function handleCategory (evt) {
+  const handleCategory = (evt) => {
       setSelectedCategory(evt.target.value);
   }
-  
+  let username = 'test@liferay.com';
+  let password = 'test';
+  let authString = `${username}:${password}`
+  let headers = new Headers();
+  headers.set('Authorization', 'Basic ' + btoa(authString))
+
+  async function selectedRow  (row) {
+        console.log('in async function ' + row)
+        if(row === '35029') {
+          setUrl('https://webserver-trialanthem-prd.lfr.cloud/o/headless-anthem-forms/v1.0/forms/35029');
+        }else if(row === '34691')
+          setUrl('https://webserver-trialanthem-prd.lfr.cloud/o/headless-anthem-forms/v1.0/forms/34691')
+        else if (row === '34639')
+          setUrl('https://webserver-trialanthem-prd.lfr.cloud/o/headless-anthem-forms/v1.0/forms/34639')
+        console.log(url)
+        const response = await fetch(url,{method: 'GET', headers: headers});
+        const json = await response.json();
+        console.log(json);
+        setData(json);
+        setLoading(false);
+      return true;
+      
+  }
+  useEffect(() => {
+    selectedRow();
+  }, []);
+
   return (
       <> 
          <Row>
@@ -63,7 +95,7 @@ const FormHeader = (props) => {
          </Row>
          <Row>
            <Col>
-             <FormTable items={props.items} loading={props.loading}/>
+             <FormTable selectedRow={selectedRow} items={props.items} loading={props.loading}/>
            </Col>
          </Row>
          <Row>
@@ -71,7 +103,17 @@ const FormHeader = (props) => {
             <LoadingButton getForms={props.getForms} />
            </Col>
          </Row> 
-        
+         <Row>
+           <Col>
+           {loading ? (
+            <h4>No Form data</h4>
+            ) : (
+               <UserForm props={data}/>
+             
+            )
+            }
+           </Col>
+         </Row>
       </>
   )
 

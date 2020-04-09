@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Container, Spinner} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { useFetch } from './hooks';
 import FormHeader from './components/FormHeader';
 import FormNavBar from './components/FormNavBar';
@@ -25,9 +25,7 @@ function App() {
     <div className="App-header">
      <Container>
       <FormNavBar/>      
-       <FormHeader getForms={()=> getForms} items={data.items} loading={loading}/>
-     
-         
+       <FormHeader getForms={getForms} items={data.items} loading={loading}/>   
       </Container>
     </div>
   );
